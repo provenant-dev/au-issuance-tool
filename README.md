@@ -24,7 +24,7 @@ chmod +x issue-au.sh
 Then run the script:
 
 ```shell
-./issue-au.ts
+./issue-au.sh
 ```
 
 Result will appear in console:
