@@ -10,9 +10,11 @@ let WITS: string[] = (process.env.WITS as string).split(',')
 
 
 async function connectWallet(url: string, bootUrl: string) {
+  const passcode = signify.randomPasscode();
+  console.log(`passcode=${passcode}`);
   const client = new signify.SignifyClient(
       url,
-      signify.randomPasscode(),
+      passcode,
       signify.Tier.low,
       bootUrl
   );

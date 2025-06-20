@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "ts-node gen-au.ts"
+  },
   "dependencies": {
     "signify-ts": "https://github.com/provenant-dev/signify-ts.git#development"
   },

@@ -1,0 +1,1 @@
+It is fine that we have these keys committed into git. This is a delibrate decision.
