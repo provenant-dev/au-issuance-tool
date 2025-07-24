@@ -9,6 +9,7 @@
 - `npm i`
 - `chmod +x issue-au.sh`
 - `./issue-au.sh`
+- Make sure to add generated data in this file [keys/keys.md](./keys/keys.md) and commit changes to main branch
 
 ## Output
 
