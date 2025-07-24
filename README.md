@@ -1,38 +1,27 @@
-Prerequisites:
+# How to run
 
-- node
-- npm
-- npx (>=10.3.0)
-- Run KERIA and Witnesses
+## Steps
 
-Please set URL and witnesses AIDs in `.env` corresponding to your environment. Note that AID should be comma separated, without spaces.
-See `.env.example` file.
+- Install node v18. Recommended way to install node is via [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md#installing-and-updating)
+- `cp .env.example .env`
+- `docker compose up`
+- Optional, if using nvm, then `nvm use`
+- `npm i`
+- `chmod +x issue-au.sh`
+- `./issue-au.sh`
 
-```env
-BOOT_URL=http://127.0.0.1:3903
-KERIA_URL=http://127.0.0.1:3901
-WITS=comma,separated,aids
-```
-
-Open terminal at root project dir and install dependencies:
-
-```shell
-npm i
-chmod +x issue-au.sh
-```
-
-Then run the script:
-
-```shell
-./issue-au.sh
-```
+## Output
 
 Result will appear in console:
 
-```
+```bash
 AID=*****************************************
 PUBLIC KEY=*****************************************
 PRIVATE KEY=*****************************************
 AU issued
 ```
 
+## How to debug in IDE
+
+- Uncomment line in .env that are for debugging in IDE
+- Use launch config in .vscode/launch.json and run debugger via IDE debug option

@@ -1,0 +1,85 @@
+version: "3.9"
+name: piraha
+
+x-default-logging: &logging
+  driver: "json-file"
+  options:
+    max-size: "20m"
+    max-file: "2"
+
+
+networks:
+  keria-network:
+    driver: bridge
+
+
+services:
+  keria:
+    image: ${AWS_ACC_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/keria:${KERIA_VERSION}
+#    image: weboftrust/keria:0.2.0-dev3
+    user: 1001:1001
+    restart: always
+    ports:
+      - "13901:13901"
+      - "13902:13902"
+      - "13903:13903"
+    networks:
+      - keria-network
+    logging: *logging
+    environment:
+      - ENV=dev
+      - ADMIN_HTTP_PORT=13901
+      - LOCAL_PORT=13902
+      - BOOT_PORT=13903
+      - HOST_URL=localhost
+      - WITNESS_URLS=${WITNESS_URLS}
+      - SCHEMA_URLS=${SCHEMA_URLS}
+      - KERI_AGENT_CORS=true
+      - KERIA_RELEASER_TIMEOUT=3600
+    volumes:
+      - ./storage/keria/:/usr/local/var/keri/
+      - ./reports/:/reports/
+
+  witness1:
+    image: ${AWS_ACC_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/witness:${WITNESS_VERSION}
+    user: 1001:1001
+    networks:
+      - keria-network
+    restart: on-failure:5
+    ports:
+      - "5631:5631" # HTTP
+      - "5632:5632" # TCP
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "2"
+    environment:
+      - SALT=0AAmgILqzxpeCUsYT5PC3RUD
+      - PASSCODE=0ABxS01vSjlVOHVhdzc1ZHFP
+      - WITNESS_URL=witness1
+    volumes:
+      - ./storage/witness-1:/usr/local/var/keri/
+
+
+
+  witness2:
+    image: ${AWS_ACC_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/witness:${WITNESS_VERSION}
+    user: 1001:1001
+    networks:
+      - keria-network
+    restart: on-failure:5
+    ports:
+      - "5641:5631" # HTTP
+      - "5642:5632" # TCP
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "2"
+    environment:
+      - SALT=0AAW5YRFoKcLq7-qzhnACPRr
+      - PASSCODE=0ABxS01vSjlVOHVhdzc1ZHFP
+      - WITNESS_URL=witness2
+    volumes:
+      - ./storage/witness-2/:/usr/local/var/keri/

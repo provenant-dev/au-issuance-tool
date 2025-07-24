@@ -1,0 +1,39 @@
+# Keys
+
+```bash
+# Audiocodes shim agent
+passcode=Dnt1BtrdNia-PAMzPjPhlP
+AID=BI4yDv_KFK0oPBn05Yi32YUClv_3B-W1EUFPcqeQ-U9w
+PUBLIC KEY=jjIO_8oUrSg8GfTliLfZhQKW__cH5bURQU9yp5D5T3A
+PRIVATE KEY=ja_5-7J5Rbbw3QMwSnPc9VX__Y67eJza6MnbdufLrZk
+
+# Rangeholder/Orange shim agent
+passcode=CKDB6jwL-clQ3e9wjVTMZ3
+AID=BE84VrOsi8o8IfLhubesDvG4m02eaxdKgIQivptIum6e
+PUBLIC KEY=TzhWs6yLyjwh8uG5t6wO8bibTZ5rF0qAhCK-m0i6bp4
+PRIVATE KEY=y9FCJhHxI0VeFCBT66R6NYvgD4gn5Uf7chgUl_-BHoM
+
+# QVI shim agent
+passcode=DzgXAKs2GtSrtARdHGtY-8
+AID=BGxVLJWgRUSsSgVq23-nRxI33hGsOXhsmEahYFm1lxy2
+PUBLIC KEY=bFUslaBFRKxKBWrbf6dHEjfeEaw5eGyYRqFgWbWXHLY
+PRIVATE KEY=oR-4QtQOjg7CvMqRAYxTjAumG3Mfrywbr3XD9as0J0g
+
+# Regulator shim agent
+passcode=DQI65QdlG2YDq29hy_Hs2e
+AID=BKDHnJn2cM1Tr3tkrcU8u9WEjLMwPD0-X8lS6MDpiJV4
+PUBLIC KEY=oMecmfZwzVOve2StxTy71YSMszA8PT5fyVLowOmIlXg
+PRIVATE KEY=z2J0UZwaGhfA4mxiZMeSy9opffgJegAONj5MpPS65BE
+
+# Signing Sip Redirector
+passcode=BRxWTGB_pRXkojZFZkETZh
+AID=BBNxmULQ2X4jIUa8ScMttowxVZUfPdwYN3Md8FOZNj8U
+PUBLIC KEY=E3GZQtDZfiMhRrxJwy22jDFVlR893Bg3cx3wU5k2PxQ
+PRIVATE KEY=gBwOAUDEVURkkxngwP2Kfac1Ms0vw6Kmadt3lfCwMiM
+
+# Verification Sip Redirector
+passcode=CMgHxP9tZ9XrHelY1I9xkr
+AID=BOKySh1fg7Bw1faIJJDVH7Qy2WdZj84qJIgg-MA6MAlf
+PUBLIC KEY=4rJKHV-DsHDV9ogkkNUftDLZZ1mPziokiCD4wDowCV8
+PRIVATE KEY=AHwZdeTuZmOmev4VsNx8dJov4AmRyG1wi_naaP_45Z0
+```
