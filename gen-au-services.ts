@@ -5,6 +5,7 @@ dotenv.config()
 import signify, { SignifyClient } from "signify-ts"
 import { initWallet } from './wallet'
 import yaml from 'js-yaml'
+import crypto from 'crypto'
 
 const ISSUER = 'issuer'
 
@@ -44,6 +45,7 @@ async function run() {
     await signify.ready()
 
     const svcWallets: Record<string, any> = {origin_auth:{}}
+    let sql_inserts = ""
 
     await Promise.all(
         SVC_LIST.map(async (svc) => {
@@ -56,10 +58,20 @@ async function run() {
             svcWallets.origin_auth[`${svc}_SVC_AUTH_PUBLIC_KEY`] = wallet.PUBLIC_KEY
             svcWallets.origin_auth[`${svc}_SVC_AUTH_AID`] = wallet.AID
             console.log(wallet)
+
+            const uuid = crypto.randomUUID()
+            sql_inserts += `
+---- ${svc}
+INSERT INTO user_mgmt."user" (id, account_status, origin_aid, is_au, created_by) VALUES ('${uuid}', 'ONBOARDING_COMPLETE', '${wallet.AID}', true, 'f62074da-bd5c-41d3-8c22-0588ca4bc936') ON CONFLICT DO NOTHING;
+INSERT INTO user_mgmt.other_grant ("grant", user_id, scope, scope_type) VALUES ('${svc.toLowerCase()}-svc', '${uuid}', 'demo', 'cell') ON CONFLICT DO NOTHING;
+
+`
         })
     )
 
     console.log(yaml.dump(svcWallets))
+    console.log("---- SQL INSERTS ----")
+    console.log(sql_inserts)
 }
 
 async function presentTheWallet(client: SignifyClient) {
