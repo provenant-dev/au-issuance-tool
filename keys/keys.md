@@ -54,4 +54,23 @@ passcode=CqtmM_o9rCzSmyh25yUEj2
 AID=BB4VUiqeM2xFEwDby0HqJNZuwGkp7ervM99hYUOXoGSL
 PUBLIC KEY=HhVSKp4zbEUTANvLQeok1m7AaSnt6u8z32FhQ5egZIs
 PRIVATE KEY=_y-9tjganSiljfTbl3687i_pWLP3PRjl50BQ2jktv-M
+
+# Aegis brand vetter agent v1
+passcode=CBPBsXXPkaQH9jiTeNeHoe
+AID=BNbMtD9YF4zmPm405z8k-w4qF07HV4pdklBtXYo7VW-F
+PUBLIC KEY=1sy0P1gXjOY-bjTnPyT7DioXTsdXil2SUG1dijtVb4U
+PRIVATE KEY=dXST4TmNDDmZ0hg9ZHGTjX32eDUt7kNg58we30_VYSc
+
+# Brand Assure brand vetter agent v1
+passcode=CFai-9vykK0jfwtdZilD7r
+AID=BL7404KaSEwbMTCfGWJ5oxiKE-Ybw1xVY2jpeohrYkS1
+PUBLIC KEY=vvjTgppITBsxMJ8ZYnmjGIoT5hvDXFVjaOl6iGtiRLU
+PRIVATE KEY=0pE45ZERijg2OF3FxlELp1NQMbry9hm-gK0UR8Jz0DY
+
+# Numeracle brand vetter agen v1
+passcode=CWe-AwtCRtuWX0VDpckaBP
+AID=BDzat4gy6n7CNkP47vbfINw727YE6r94CV5uZsawS1oM
+PUBLIC KEY=PNq3iDLqfsI2Q_ju9t8g3DvbtgTqv3gJXm5mxrBLWgw
+PRIVATE KEY=37Wvd5ZzuBwn2OXkPK48ETSQ2M0jawnnIODb6Ulwni0
+
 ```
