@@ -67,10 +67,22 @@ AID=BL7404KaSEwbMTCfGWJ5oxiKE-Ybw1xVY2jpeohrYkS1
 PUBLIC KEY=vvjTgppITBsxMJ8ZYnmjGIoT5hvDXFVjaOl6iGtiRLU
 PRIVATE KEY=0pE45ZERijg2OF3FxlELp1NQMbry9hm-gK0UR8Jz0DY
 
-# Numeracle brand vetter agen v1
+# Numeracle brand vetter agent v1
 passcode=CWe-AwtCRtuWX0VDpckaBP
 AID=BDzat4gy6n7CNkP47vbfINw727YE6r94CV5uZsawS1oM
 PUBLIC KEY=PNq3iDLqfsI2Q_ju9t8g3DvbtgTqv3gJXm5mxrBLWgw
 PRIVATE KEY=37Wvd5ZzuBwn2OXkPK48ETSQ2M0jawnnIODb6Ulwni0
+
+# GLEIF agent v1
+passcode=DlkqGM8PqtDz6gU9h_bLyb
+AID=BJsxTjslIGZa0ksigiiFulVv166EHwfBcNBNW-doNiuC
+PUBLIC KEY=mzFOOyUgZlrSSyKCKIW6VW_XroQfB8Fw0E1b52g2K4I
+PRIVATE KEY=_kFgHJrrMi24Y0MVMOqMuWHhP6QxUC3N84zDJhBk6oY
+
+# GSMA agent v1
+passcode=CMexJcvkjxjKHVYNEp3SrJ
+AID=BHCG_6Mmnc6Fc-TtE9Kteggs8-AgDlruKg44DaFh-NN5
+PUBLIC KEY=cIb_oyadzoVz5O0T0q16CCzz4CAOWu4qDjgNoWH403k
+PRIVATE KEY=2vW8fAsfTDmw95a3culJzHhPOu9hElycLrOeE-Pmj_g
 
 ```
