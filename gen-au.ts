@@ -21,11 +21,11 @@ async function presentTheWallet(client: SignifyClient) {
     let keyValue = client.manager?.get(ident)
     let rawPrivKey = keyValue.signers[0].raw
     let rawPubKey = keyValue.signers[0].verfer.raw
-    console.log()
-    console.log("============ AU User Creds ============")
+    // console.log()
+    // console.log("============ AU User Creds ============")
     console.log(`AID=${keyValue.signers[0].verfer.qb64}`)
-    console.log(`PUBLIC KEY=${Buffer.from(rawPubKey).toString('base64url')}`)
     console.log(`PRIVATE KEY=${Buffer.from(rawPrivKey).toString('base64url')}`)
+    console.log(`PUBLIC KEY=${Buffer.from(rawPubKey).toString('base64url')}`)
 }
 
 run().then(r => console.log("AU issued"))
