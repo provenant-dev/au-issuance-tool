@@ -23,10 +23,10 @@ async function connectWallet(url: string, bootUrl: string) {
   await client.connect();
 
   const state = await client.state();
-  console.log('Client connected to agent: ');
-  console.log(
-      `  Client AID:  ${ state.controller.state.i },  Agent AID: ${ state.agent.i }`
-  );
+  // console.log('Client connected to agent: ');
+  // console.log(
+  //     `  Client AID:  ${ state.controller.state.i },  Agent AID: ${ state.agent.i }`
+  // );
   return client;
 }
 
@@ -74,7 +74,7 @@ async function createIdentifier(
 
   await client.identifiers().addEndRole(name, 'agent', client.agent.pre);
 
-  console.log(`  New AID created, Alias: ${ name }  AID: ${ aid.prefix }`);
+  // console.log(`  New AID created, Alias: ${ name }  AID: ${ aid.prefix }`);
   return aid.prefix;
 }
 
@@ -82,7 +82,7 @@ export const initWallet = async (alias: any) => {
   await signify.ready()
   console.log('Connect to the wallet')
   const client = await connectWallet(KERIA_URL, BOOT_URL)
-  console.log('Сreate identifier')
+  // console.log('Сreate identifier')
   const aid = await createIdentifier(client, alias, WITS)
   return {client, alias, aid}
 }
