@@ -6,9 +6,28 @@ You'll need these installed:
 
 - Node v18, or higher
 - Typescript
-- Docker Compose
+- Docker Compose (only needed for AU issuance)
 
-## Steps
+## Quick Start: Generate Non-Transferable Keypair
+
+```bash
+npm i
+npx ts-node gen-non-transferable-keypair.ts
+```
+
+Output:
+```bash
+Salt (qb64):
+AID (Public Key CESR):
+Private Key (base64url):
+Public Key (base64url):
+```
+
+---
+
+## Full Setup: Issue AUs (Requires KERIA + Witnesses)
+
+Use this when you need to issue verifiable credentials (AUs) with full KERI infrastructure.
 
 ### Get Keria & Witnesses Running
 
