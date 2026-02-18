@@ -15,7 +15,7 @@ async function generateKeypairOnly() {
     const signer = salter.signer(signify.MtrDex.Ed25519_Seed, false);
     
     console.log(`Salt (qb64): ${salter.qb64}`);
-    console.log(`AID (Public Key CESR): ${signer.verfer.qb64}`);
+    console.log(`Representation of the Public Key as B64 CESR primitive: ${signer.verfer.qb64}`);
     console.log(`Private Key (base64url): ${Buffer.from(signer.raw).toString('base64url')}`);
     console.log(`Public Key (base64url): ${Buffer.from(signer.verfer.raw).toString('base64url')}`);
     
